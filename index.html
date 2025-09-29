@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Routine Tracker - Deine täglichen Gewohnheiten im Griff</title>
+    <meta name="description" content="Eine intuitive App zur Verfolgung deiner täglichen Routinen. Baue gesunde Gewohnheiten auf und verfolge deinen Fortschritt mit Routine Tracker.">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .feature-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        .screenshot-container {
+            max-width: 300px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <nav class="bg-white shadow-lg fixed w-full z-50">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <i class="fas fa-check-circle text-blue-600 text-2xl mr-3"></i>
+                    <span class="text-xl font-bold text-gray-800">Routine Tracker</span>
+                </div>
+                <div class="hidden md:flex space-x-6">
+                    <a href="#features" class="text-gray-600 hover:text-blue-600 transition">Features</a>
+                    <a href="#screenshots" class="text-gray-600 hover:text-blue-600 transition">Screenshots</a>
+                    <a href="#download" class="text-gray-600 hover:text-blue-600 transition">Download</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="gradient-bg text-white pt-24 pb-16">
+        <div class="container mx-auto px-6 text-center">
+            <div class="max-w-4xl mx-auto">
+                <h1 class="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+                    Baue <span class="text-yellow-300">gesunde Gewohnheiten</span> auf
+                </h1>
+                <p class="text-xl md:text-2xl mb-8 text-blue-100">
+                    Verfolge deine täglichen Routinen, baue Streaks auf und erreiche deine Ziele mit der intuitiven Routine Tracker App.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                    <a href="#download" class="bg-white text-blue-600 px-8 py-4 rounded-full font-semibold text-lg hover:bg-blue-50 transition shadow-lg">
+                        <i class="fab fa-apple mr-2"></i>Für iOS herunterladen
+                    </a>
+                    <a href="#download" class="bg-green-500 text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-green-600 transition shadow-lg">
+                        <i class="fab fa-google-play mr-2"></i>Für Android herunterladen
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Warum Routine Tracker?</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    Eine durchdachte App, die dir dabei hilft, positive Gewohnheiten aufzubauen und beizubehalten.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="feature-card bg-white p-8 rounded-xl shadow-lg border border-gray-100">
+                    <div class="text-blue-600 text-4xl mb-4">
+                        <i class="fas fa-list-check"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Einfache Routine-Verwaltung</h3>
+                    <p class="text-gray-600">
+                        Erstelle und verwalte deine täglichen Routinen mit nur wenigen Taps. Kategorisiere und organisiere sie nach deinen Bedürfnissen.
+                    </p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="feature-card bg-white p-8 rounded-xl shadow-lg border border-gray-100">
+                    <div class="text-green-600 text-4xl mb-4">
+                        <i class="fas fa-fire"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Streak Tracking</h3>
+                    <p class="text-gray-600">
+                        Baue beeindruckende Serien auf und sieh deinen Fortschritt. Motivierende Streaks helfen dir dabei, dranzubleiben.
+                    </p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="feature-card bg-white p-8 rounded-xl shadow-lg border border-gray-100">
+                    <div class="text-purple-600 text-4xl mb-4">
+                        <i class="fas fa-bell"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Smart Erinnerungen</h3>
+                    <p class="text-gray-600">
+                        Personalisierte Benachrichtigungen zur richtigen Zeit. Nie wieder eine wichtige Routine vergessen.
+                    </p>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="feature-card bg-white p-8 rounded-xl shadow-lg border border-gray-100">
+                    <div class="text-orange-600 text-4xl mb-4">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Detaillierte Analytics</h3>
+                    <p class="text-gray-600">
+                        Verfolge deinen Fortschritt mit aussagekräftigen Statistiken und Trends. Erkenne Muster in deinen Gewohnheiten.
+                    </p>
+                </div>
+
+                <!-- Feature 5 -->
+                <div class="feature-card bg-white p-8 rounded-xl shadow-lg border border-gray-100">
+                    <div class="text-red-600 text-4xl mb-4">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Achievements System</h3>
+                    <p class="text-gray-600">
+                        Schalte Erfolge frei und teile deine Meilensteine. Gamification macht das Aufbauen von Gewohnheiten zum Spiel.
+                    </p>
+                </div>
+
+                <!-- Feature 6 -->
+                <div class="feature-card bg-white p-8 rounded-xl shadow-lg border border-gray-100">
+                    <div class="text-indigo-600 text-4xl mb-4">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Datenschutz First</h3>
+                    <p class="text-gray-600">
+                        Deine Daten bleiben lokal auf deinem Gerät. Keine Cloud-Speicherung, keine Datensammlung, 100% privat.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Screenshots Section -->
+    <section id="screenshots" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Screenshots</h2>
+                <p class="text-xl text-gray-600">Entdecke die intuitive Benutzeroberfläche</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+                <!-- Screenshot Placeholder 1 -->
+                <div class="screenshot-container bg-white rounded-2xl p-4 shadow-lg">
+                    <div class="bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl aspect-[9/16] flex items-center justify-center text-white">
+                        <div class="text-center">
+                            <i class="fas fa-mobile-alt text-6xl mb-4 opacity-50"></i>
+                            <p class="text-lg font-semibold">Hauptbildschirm</p>
+                            <p class="text-sm opacity-75">Routinen-Übersicht</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Screenshot Placeholder 2 -->
+                <div class="screenshot-container bg-white rounded-2xl p-4 shadow-lg">
+                    <div class="bg-gradient-to-br from-green-500 to-blue-600 rounded-xl aspect-[9/16] flex items-center justify-center text-white">
+                        <div class="text-center">
+                            <i class="fas fa-chart-bar text-6xl mb-4 opacity-50"></i>
+                            <p class="text-lg font-semibold">Statistiken</p>
+                            <p class="text-sm opacity-75">Fortschritt verfolgen</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Screenshot Placeholder 3 -->
+                <div class="screenshot-container bg-white rounded-2xl p-4 shadow-lg">
+                    <div class="bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl aspect-[9/16] flex items-center justify-center text-white">
+                        <div class="text-center">
+                            <i class="fas fa-cog text-6xl mb-4 opacity-50"></i>
+                            <p class="text-lg font-semibold">Einstellungen</p>
+                            <p class="text-sm opacity-75">Personalisierung</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Section -->
+    <section id="download" class="py-20 gradient-bg text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl font-bold mb-6">Bereit anzufangen?</h2>
+            <p class="text-xl mb-8 text-blue-100 max-w-2xl mx-auto">
+                Lade Routine Tracker heute herunter und beginne deine Reise zu besseren Gewohnheiten.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-6 justify-center items-center mb-12">
+                <!-- iOS Download Button -->
+                <a href="#" class="bg-black text-white px-8 py-4 rounded-xl flex items-center gap-3 hover:bg-gray-800 transition shadow-lg">
+                    <i class="fab fa-apple text-2xl"></i>
+                    <div class="text-left">
+                        <p class="text-xs opacity-75">Download im</p>
+                        <p class="text-lg font-semibold">App Store</p>
+                    </div>
+                </a>
+
+                <!-- Android Download Button -->
+                <a href="#" class="bg-black text-white px-8 py-4 rounded-xl flex items-center gap-3 hover:bg-gray-800 transition shadow-lg">
+                    <i class="fab fa-google-play text-2xl"></i>
+                    <div class="text-left">
+                        <p class="text-xs opacity-75">Jetzt bei</p>
+                        <p class="text-lg font-semibold">Google Play</p>
+                    </div>
+                </a>
+            </div>
+
+            <!-- App Info -->
+            <div class="text-center text-blue-100">
+                <p class="mb-2">📱 Kompatibel mit iOS 15.0+ und Android 8.0+</p>
+                <p class="mb-2">🌟 Kostenlos • Keine Werbung • Keine In-App-Käufe</p>
+                <p>🔒 100% Datenschutz • Offline funktionsfähig</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-300 py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- App Info -->
+                <div>
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-check-circle text-blue-500 text-2xl mr-3"></i>
+                        <span class="text-xl font-bold text-white">Routine Tracker</span>
+                    </div>
+                    <p class="text-gray-400 mb-4">
+                        Die intuitive App für das Aufbauen und Verfolgen deiner täglichen Gewohnheiten.
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#features" class="hover:text-blue-400 transition">Features</a></li>
+                        <li><a href="#screenshots" class="hover:text-blue-400 transition">Screenshots</a></li>
+                        <li><a href="#download" class="hover:text-blue-400 transition">Download</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-4">Kontakt</h4>
+                    <p class="text-gray-400 mb-2">
+                        <i class="fas fa-envelope mr-2"></i>
+                        support@routinetracker.app
+                    </p>
+                    <p class="text-gray-400 mb-4">
+                        <i class="fas fa-shield-alt mr-2"></i>
+                        Datenschutz ist uns wichtig
+                    </p>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-700 pt-8 mt-8 text-center text-gray-400">
+                <p>&copy; 2025 Routine Tracker. Alle Rechte vorbehalten.</p>
+                <p class="mt-2">Made with ❤️ for better habits</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Smooth Scrolling -->
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add scroll effect to navbar
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 100) {
+                nav.classList.add('shadow-xl');
+            } else {
+                nav.classList.remove('shadow-xl');
+            }
+        });
+    </script>
+</body>
+</html>
