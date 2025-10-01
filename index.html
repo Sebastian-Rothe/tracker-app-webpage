@@ -3,11 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Routine Tracker - Deine täglichen Gewohnheiten im Griff</title>
-    <meta name="description" content="Eine intuitive App zur Verfolgung deiner täglichen Routinen. Baue gesunde Gewohnheiten auf und verfolge deinen Fortschritt mit Routine Tracker.">
+    <title>Routine Tracker - Deine täglichen                     <img src="assets/img/Status_page.jpg" 
+                         alt="Routine Tracker Statistiken - Fortschritt und Streaks verfolgen" 
+                         class="w-full rounded-xl shadow-lg"
+                         width="300" height="650" loading="lazy" decoding="async">ohnheiten im Griff</title>
+    <meta name="description" content="Routine Tracker hilft dir dabei, deine täglichen Gewohnheiten zu verfolgen und zu entwickeln. Kostenlose Android App für bessere Routinen und Produktivität.">
+    <meta name="keywords" content="Routine Tracker, Gewohnheiten, Habits, Android App, Produktivität, Routinen, kostenlos">
+    <meta name="author" content="Sebastian Rothe">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Routine Tracker - Deine täglichen Gewohnheiten im Griff">
+    <meta property="og:description" content="Verfolge und entwickle deine täglichen Gewohnheiten mit der kostenlosen Routine Tracker Android App.">
+    <meta property="og:image" content="./assets/img/app-icon.png">
+    <meta property="og:url" content="https://your-domain.netlify.app">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Routine Tracker - Deine täglichen Gewohnheiten im Griff">
+    <meta name="twitter:description" content="Verfolge und entwickle deine täglichen Gewohnheiten mit der kostenlosen Routine Tracker Android App.">
+    <meta name="twitter:image" content="./assets/img/app-icon.png">
+    
     <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="canonical" href="https://your-domain.netlify.app/">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" as="style">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" as="style">
+    <link rel="preload" href="./assets/img/app-icon.png" as="image">
+    
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "MobileApplication",
+        "name": "Routine Tracker",
+        "description": "Eine intuitive Android App zur Verfolgung deiner täglichen Routinen. Baue gesunde Gewohnheiten auf und verfolge deinen Fortschritt.",
+        "operatingSystem": "Android",
+        "applicationCategory": "LifestyleApplication",
+        "author": {
+            "@type": "Person",
+            "name": "Sebastian Rothe"
+        },
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "EUR"
+        },
+        "keywords": "Gewohnheiten, Routinen, Produktivität, Android App, kostenlos",
+        "inLanguage": "de"
+    }
+    </script>
+    
     <style>
         .gradient-bg {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -31,14 +82,14 @@
         <div class="container mx-auto px-6 py-4">
             <div class="flex justify-between items-center">
                 <div class="flex items-center">
-                    <img src="assets/img/app-icon.png" alt="Routine Tracker App Icon" class="w-8 h-8 mr-3 rounded-lg">
+                                            <img src="assets/img/app-icon.png" alt="Routine Tracker App Icon" class="w-8 h-8 mr-3 rounded-lg" width="32" height="32" loading="lazy">
                     <span class="text-xl font-bold text-gray-800">Routine Tracker</span>
                 </div>
-                <div class="hidden md:flex space-x-6">
-                    <a href="#features" class="text-gray-600 hover:text-blue-600 transition">Features</a>
-                    <a href="#screenshots" class="text-gray-600 hover:text-blue-600 transition">Screenshots</a>
-                    <a href="#download" class="text-gray-600 hover:text-blue-600 transition">Download</a>
-                </div>
+                <nav class="hidden md:flex space-x-6" role="navigation" aria-label="Hauptnavigation">
+                    <a href="#features" class="text-gray-600 hover:text-blue-600 transition" aria-label="Zu den App-Features">Features</a>
+                    <a href="#screenshots" class="text-gray-600 hover:text-blue-600 transition" aria-label="App-Screenshots ansehen">Screenshots</a>
+                    <a href="#download" class="text-gray-600 hover:text-blue-600 transition" aria-label="App herunterladen">Download</a>
+                </nav>
             </div>
         </div>
     </nav>
@@ -54,8 +105,8 @@
                     Verfolge deine täglichen Routinen, baue Streaks auf und erreiche deine Ziele mit der intuitiven Routine Tracker App.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                    <a href="#download" class="bg-green-500 text-white px-10 py-5 rounded-full font-semibold text-xl hover:bg-green-600 transition shadow-lg">
-                        <i class="fab fa-google-play mr-3"></i>Für Android herunterladen
+                    <a href="#download" class="bg-green-500 text-white px-10 py-5 rounded-full font-semibold text-xl hover:bg-green-600 transition shadow-lg" aria-label="Routine Tracker für Android herunterladen">
+                        <i class="fab fa-google-play mr-3" aria-hidden="true"></i>Für Android herunterladen
                     </a>
                     <p class="text-blue-100 text-sm mt-2">
                         📱 Bald auch für iOS verfügbar
@@ -180,7 +231,8 @@
                 <div class="screenshot-container bg-white rounded-2xl p-4 shadow-lg">
                     <img src="assets/img/Settings_page.jpg" 
                          alt="Routine Tracker Einstellungen - Personalisierung und Konfiguration" 
-                         class="w-full rounded-xl shadow-lg">
+                         class="w-full rounded-xl shadow-lg"
+                         width="300" height="650" loading="lazy" decoding="async">
                     <div class="text-center mt-4">
                         <p class="text-lg font-semibold text-gray-800">Einstellungen</p>
                         <p class="text-sm text-gray-600">Personalisierung</p>
@@ -200,8 +252,8 @@
             
             <div class="flex flex-col gap-6 justify-center items-center mb-12">
                 <!-- Android Download Button -->
-                <a href="#" class="bg-green-600 text-white px-12 py-6 rounded-xl flex items-center gap-4 hover:bg-green-700 transition shadow-lg transform hover:scale-105">
-                    <i class="fab fa-google-play text-3xl"></i>
+                <a href="#" class="bg-green-600 text-white px-12 py-6 rounded-xl flex items-center gap-4 hover:bg-green-700 transition shadow-lg transform hover:scale-105" aria-label="Routine Tracker kostenlos bei Google Play herunterladen">
+                    <i class="fab fa-google-play text-3xl" aria-hidden="true"></i>
                     <div class="text-left">
                         <p class="text-sm opacity-90">Jetzt kostenlos bei</p>
                         <p class="text-2xl font-bold">Google Play</p>
@@ -232,7 +284,7 @@
                 <!-- App Info -->
                 <div>
                     <div class="flex items-center mb-4">
-                        <img src="assets/img/app-icon.png" alt="Routine Tracker App Icon" class="w-8 h-8 mr-3 rounded-lg">
+                        <img src="assets/img/app-icon.png" alt="Routine Tracker App Icon" class="w-8 h-8 mr-3 rounded-lg" width="32" height="32" loading="lazy">
                         <span class="text-xl font-bold text-white">Routine Tracker</span>
                     </div>
                     <p class="text-gray-400 mb-4">
