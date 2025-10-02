@@ -43,6 +43,11 @@
     />
     <meta name="twitter:image" content="./assets/img/app-icon.png" />
 
+    <!-- Language and SEO -->
+    <link rel="alternate" hreflang="de" href="https://tracker-app-webpage.netlify.app/">
+    <link rel="alternate" hreflang="en" href="https://tracker-app-webpage.netlify.app/?lang=en">
+    <link rel="alternate" hreflang="x-default" href="https://tracker-app-webpage.netlify.app/">
+
     <!-- Favicon and App Icons -->
     <link rel="icon" href="assets/img/favicon_io/favicon.ico?v=3" />
     <link
@@ -147,7 +152,7 @@
             <span class="text-xl font-bold text-gray-800">Routine Tracker</span>
           </div>
           <nav
-            class="hidden md:flex space-x-6"
+            class="hidden md:flex space-x-6 items-center"
             role="navigation"
             aria-label="Hauptnavigation"
           >
@@ -155,20 +160,36 @@
               href="#features"
               class="text-gray-600 hover:text-blue-600 transition"
               aria-label="Zu den App-Features"
+              data-i18n="nav.features"
               >Features</a
             >
             <a
               href="#screenshots"
               class="text-gray-600 hover:text-blue-600 transition"
               aria-label="App-Screenshots ansehen"
+              data-i18n="nav.screenshots"
               >Screenshots</a
             >
             <a
               href="#download"
               class="text-gray-600 hover:text-blue-600 transition"
               aria-label="App herunterladen"
+              data-i18n="nav.download"
               >Download</a
             >
+            
+            <!-- Language Switcher -->
+            <div class="flex items-center ml-4 space-x-2">
+              <button
+                id="lang-toggle"
+                class="flex items-center space-x-2 px-3 py-2 rounded-lg border border-gray-200 hover:bg-gray-50 transition"
+                aria-label="Sprache wechseln"
+              >
+                <i class="fas fa-globe text-gray-600"></i>
+                <span id="current-lang" class="text-sm font-medium text-gray-700">DE</span>
+                <i class="fas fa-chevron-down text-xs text-gray-500"></i>
+              </button>
+            </div>
           </nav>
         </div>
       </div>
@@ -178,10 +199,10 @@
     <section class="gradient-bg text-white pt-24 pb-16">
       <div class="container mx-auto px-6 text-center">
         <div class="max-w-4xl mx-auto">
-          <h1 class="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+          <h1 class="text-5xl md:text-6xl font-bold mb-6 leading-tight" data-i18n="hero.title">
             Baue <span class="text-yellow-300">gesunde Gewohnheiten</span> auf
           </h1>
-          <p class="text-xl md:text-2xl mb-8 text-blue-100">
+          <p class="text-xl md:text-2xl mb-8 text-blue-100" data-i18n="hero.subtitle">
             Verfolge deine täglichen Routinen, baue Streaks auf und erreiche
             deine Ziele mit der intuitiven Routine Tracker App.
           </p>
@@ -193,10 +214,10 @@
               class="bg-green-500 text-white px-10 py-5 rounded-full font-semibold text-xl hover:bg-green-600 transition shadow-lg"
               aria-label="Routine Tracker für Android herunterladen"
             >
-              <i class="fab fa-google-play mr-3" aria-hidden="true"></i>Für
-              Android herunterladen
+              <i class="fab fa-google-play mr-3" aria-hidden="true"></i><span data-i18n="hero.cta">Für
+              Android herunterladen</span>
             </a>
-            <p class="text-blue-100 text-sm mt-2">
+            <p class="text-blue-100 text-sm mt-2" data-i18n="hero.ios_coming">
               📱 Bald auch für iOS verfügbar
             </p>
           </div>
@@ -208,10 +229,10 @@
     <section id="features" class="py-20 bg-white">
       <div class="container mx-auto px-6">
         <div class="text-center mb-16">
-          <h2 class="text-4xl font-bold text-gray-800 mb-4">
+          <h2 class="text-4xl font-bold text-gray-800 mb-4" data-i18n="features.title">
             Warum Routine Tracker?
           </h2>
-          <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+          <p class="text-xl text-gray-600 max-w-2xl mx-auto" data-i18n="features.subtitle">
             Eine durchdachte App, die dir dabei hilft, positive Gewohnheiten
             aufzubauen und beizubehalten.
           </p>
@@ -225,10 +246,10 @@
             <div class="text-blue-600 text-4xl mb-4">
               <i class="fas fa-list-check"></i>
             </div>
-            <h3 class="text-xl font-semibold text-gray-800 mb-3">
+            <h3 class="text-xl font-semibold text-gray-800 mb-3" data-i18n="feature1.title">
               Einfache Routine-Verwaltung
             </h3>
-            <p class="text-gray-600">
+            <p class="text-gray-600" data-i18n="feature1.description">
               Erstelle und verwalte deine täglichen Routinen mit nur wenigen
               Taps. Kategorisiere und organisiere sie nach deinen Bedürfnissen.
             </p>
@@ -241,10 +262,10 @@
             <div class="text-green-600 text-4xl mb-4">
               <i class="fas fa-fire"></i>
             </div>
-            <h3 class="text-xl font-semibold text-gray-800 mb-3">
+            <h3 class="text-xl font-semibold text-gray-800 mb-3" data-i18n="feature2.title">
               Streak Tracking
             </h3>
-            <p class="text-gray-600">
+            <p class="text-gray-600" data-i18n="feature2.description">
               Baue beeindruckende Serien auf und sieh deinen Fortschritt.
               Motivierende Streaks helfen dir dabei, dranzubleiben.
             </p>
@@ -257,10 +278,10 @@
             <div class="text-purple-600 text-4xl mb-4">
               <i class="fas fa-bell"></i>
             </div>
-            <h3 class="text-xl font-semibold text-gray-800 mb-3">
+            <h3 class="text-xl font-semibold text-gray-800 mb-3" data-i18n="feature3.title">
               Smart Erinnerungen
             </h3>
-            <p class="text-gray-600">
+            <p class="text-gray-600" data-i18n="feature3.description">
               Personalisierte Benachrichtigungen zur richtigen Zeit. Nie wieder
               eine wichtige Routine vergessen.
             </p>
@@ -273,10 +294,10 @@
             <div class="text-orange-600 text-4xl mb-4">
               <i class="fas fa-chart-line"></i>
             </div>
-            <h3 class="text-xl font-semibold text-gray-800 mb-3">
+            <h3 class="text-xl font-semibold text-gray-800 mb-3" data-i18n="feature4.title">
               Detaillierte Analytics
             </h3>
-            <p class="text-gray-600">
+            <p class="text-gray-600" data-i18n="feature4.description">
               Verfolge deinen Fortschritt mit aussagekräftigen Statistiken und
               Trends. Erkenne Muster in deinen Gewohnheiten.
             </p>
@@ -289,10 +310,10 @@
             <div class="text-red-600 text-4xl mb-4">
               <i class="fas fa-trophy"></i>
             </div>
-            <h3 class="text-xl font-semibold text-gray-800 mb-3">
+            <h3 class="text-xl font-semibold text-gray-800 mb-3" data-i18n="feature5.title">
               Achievements System
             </h3>
-            <p class="text-gray-600">
+            <p class="text-gray-600" data-i18n="feature5.description">
               Schalte Erfolge frei und teile deine Meilensteine. Gamification
               macht das Aufbauen von Gewohnheiten zum Spiel.
             </p>
@@ -305,10 +326,10 @@
             <div class="text-indigo-600 text-4xl mb-4">
               <i class="fas fa-shield-alt"></i>
             </div>
-            <h3 class="text-xl font-semibold text-gray-800 mb-3">
+            <h3 class="text-xl font-semibold text-gray-800 mb-3" data-i18n="feature6.title">
               Datenschutz First
             </h3>
-            <p class="text-gray-600">
+            <p class="text-gray-600" data-i18n="feature6.description">
               Deine Daten bleiben lokal auf deinem Gerät. Keine
               Cloud-Speicherung, keine Datensammlung, 100% privat.
             </p>
@@ -321,8 +342,8 @@
     <section id="screenshots" class="py-20 bg-gray-50">
       <div class="container mx-auto px-6">
         <div class="text-center mb-16">
-          <h2 class="text-4xl font-bold text-gray-800 mb-4">Screenshots</h2>
-          <p class="text-xl text-gray-600">
+          <h2 class="text-4xl font-bold text-gray-800 mb-4" data-i18n="screenshots.title">Screenshots</h2>
+          <p class="text-xl text-gray-600" data-i18n="screenshots.subtitle">
             Entdecke die intuitive Benutzeroberfläche
           </p>
         </div>
@@ -336,8 +357,8 @@
               class="w-full rounded-xl shadow-lg"
             />
             <div class="text-center mt-4">
-              <p class="text-lg font-semibold text-gray-800">Hauptbildschirm</p>
-              <p class="text-sm text-gray-600">Routinen-Übersicht</p>
+              <p class="text-lg font-semibold text-gray-800" data-i18n="screenshot1.title">Hauptbildschirm</p>
+              <p class="text-sm text-gray-600" data-i18n="screenshot1.subtitle">Routinen-Übersicht</p>
             </div>
           </div>
 
@@ -349,8 +370,8 @@
               class="w-full rounded-xl shadow-lg"
             />
             <div class="text-center mt-4">
-              <p class="text-lg font-semibold text-gray-800">Statistiken</p>
-              <p class="text-sm text-gray-600">Fortschritt verfolgen</p>
+              <p class="text-lg font-semibold text-gray-800" data-i18n="screenshot2.title">Statistiken</p>
+              <p class="text-sm text-gray-600" data-i18n="screenshot2.subtitle">Fortschritt verfolgen</p>
             </div>
           </div>
 
@@ -366,8 +387,8 @@
               decoding="async"
             />
             <div class="text-center mt-4">
-              <p class="text-lg font-semibold text-gray-800">Einstellungen</p>
-              <p class="text-sm text-gray-600">Personalisierung</p>
+              <p class="text-lg font-semibold text-gray-800" data-i18n="screenshot3.title">Einstellungen</p>
+              <p class="text-sm text-gray-600" data-i18n="screenshot3.subtitle">Personalisierung</p>
             </div>
           </div>
         </div>
@@ -377,8 +398,8 @@
     <!-- Download Section -->
     <section id="download" class="py-20 gradient-bg text-white">
       <div class="container mx-auto px-6 text-center">
-        <h2 class="text-4xl font-bold mb-6">Bereit anzufangen?</h2>
-        <p class="text-xl mb-8 text-blue-100 max-w-2xl mx-auto">
+        <h2 class="text-4xl font-bold mb-6" data-i18n="download.title">Bereit anzufangen?</h2>
+        <p class="text-xl mb-8 text-blue-100 max-w-2xl mx-auto" data-i18n="download.subtitle">
           Lade Routine Tracker heute herunter und beginne deine Reise zu
           besseren Gewohnheiten.
         </p>
@@ -392,26 +413,26 @@
           >
             <i class="fab fa-google-play text-3xl" aria-hidden="true"></i>
             <div class="text-left">
-              <p class="text-sm opacity-90">Jetzt kostenlos bei</p>
-              <p class="text-2xl font-bold">Google Play</p>
+              <p class="text-sm opacity-90" data-i18n="download.get_free">Jetzt kostenlos bei</p>
+              <p class="text-2xl font-bold" data-i18n="download.google_play">Google Play</p>
             </div>
           </a>
 
           <!-- Coming Soon iOS -->
           <div class="text-center text-blue-100">
-            <p class="text-lg font-semibold mb-2">
+            <p class="text-lg font-semibold mb-2" data-i18n="download.ios_coming">
               🍎 iOS Version in Entwicklung
             </p>
-            <p class="text-sm opacity-75">Bald auch im App Store verfügbar</p>
+            <p class="text-sm opacity-75" data-i18n="download.ios_subtitle">Bald auch im App Store verfügbar</p>
           </div>
         </div>
 
         <!-- App Info -->
         <div class="text-center text-blue-100">
-          <p class="mb-2">🤖 Kompatibel mit Android 8.0+ (API Level 26+)</p>
-          <p class="mb-2">🌟 Kostenlos • Keine Werbung • Keine In-App-Käufe</p>
-          <p class="mb-1">🔒 100% Datenschutz • 100% Offline</p>
-          <p class="text-sm opacity-75">📱 iOS Version folgt in Kürze</p>
+          <p class="mb-2" data-i18n="app_info.compatibility">🤖 Kompatibel mit Android 8.0+ (API Level 26+)</p>
+          <p class="mb-2" data-i18n="app_info.free">🌟 Kostenlos • Keine Werbung • Keine In-App-Käufe</p>
+          <p class="mb-1" data-i18n="app_info.privacy">🔒 100% Datenschutz • 100% Offline</p>
+          <p class="text-sm opacity-75" data-i18n="app_info.ios">📱 iOS Version folgt in Kürze</p>
         </div>
       </div>
     </section>
@@ -433,7 +454,7 @@
               />
               <span class="text-xl font-bold text-white">Routine Tracker</span>
             </div>
-            <p class="text-gray-400 mb-4">
+            <p class="text-gray-400 mb-4" data-i18n="footer.app_tagline">
               Die intuitive App für das Aufbauen und Verfolgen deiner täglichen
               Gewohnheiten.
             </p>
@@ -441,7 +462,7 @@
 
           <!-- Quick Links -->
           <div>
-            <h4 class="text-lg font-semibold text-white mb-4">Quick Links</h4>
+            <h4 class="text-lg font-semibold text-white mb-4" data-i18n="footer.quick_links">Quick Links</h4>
             <ul class="space-y-2">
               <li>
                 <a href="#features" class="hover:text-blue-400 transition"
@@ -463,17 +484,19 @@
 
           <!-- Legal -->
           <div>
-            <h4 class="text-lg font-semibold text-white mb-4">Rechtliches</h4>
+            <h4 class="text-lg font-semibold text-white mb-4" data-i18n="footer.legal">Rechtliches</h4>
             <ul class="space-y-2">
               <li>
                 <a
                   href="datenschutz.html"
                   class="hover:text-blue-400 transition"
+                  data-i18n="footer.privacy"
                   >Datenschutzerklärung</a
                 >
               </li>
               <li>
                 <a href="impressum.html" class="hover:text-blue-400 transition"
+                  data-i18n="footer.imprint"
                   >Impressum</a
                 >
               </li>
@@ -482,7 +505,7 @@
 
           <!-- Contact -->
           <div>
-            <h4 class="text-lg font-semibold text-white mb-4">Kontakt</h4>
+            <h4 class="text-lg font-semibold text-white mb-4" data-i18n="footer.contact">Kontakt</h4>
             <p class="text-gray-400 mb-2">
               <i class="fas fa-envelope mr-2"></i>
               mail@sebastian-rothe.com
@@ -536,6 +559,267 @@
         } else {
           nav.classList.remove("shadow-xl");
         }
+      });
+    </script>
+
+    <!-- Translation System -->
+    <script>
+      // Translation data
+      const translations = {
+        de: {
+          // Navigation
+          'nav.features': 'Features',
+          'nav.screenshots': 'Screenshots', 
+          'nav.download': 'Download',
+          
+          // Meta
+          'meta.title': 'Routine Tracker - Deine täglichen Gewohnheiten im Griff',
+          'meta.description': 'Routine Tracker hilft dir dabei, deine täglichen Gewohnheiten zu verfolgen und zu entwickeln. Kostenlose Android App für bessere Routinen und Produktivität.',
+          
+          // Hero Section
+          'hero.title': 'Baue <span class="text-yellow-300">gesunde Gewohnheiten</span> auf',
+          'hero.subtitle': 'Verfolge deine täglichen Routinen, baue Streaks auf und erreiche deine Ziele mit der intuitiven Routine Tracker App.',
+          'hero.cta': 'Für Android herunterladen',
+          'hero.ios_coming': '📱 Bald auch für iOS verfügbar',
+          
+          // Features Section
+          'features.title': 'Warum Routine Tracker?',
+          'features.subtitle': 'Eine durchdachte App, die dir dabei hilft, positive Gewohnheiten aufzubauen und beizubehalten.',
+          
+          'feature1.title': 'Einfache Routine-Verwaltung',
+          'feature1.description': 'Erstelle und verwalte deine täglichen Routinen mit nur wenigen Taps. Kategorisiere und organisiere sie nach deinen Bedürfnissen.',
+          
+          'feature2.title': 'Streak Tracking',
+          'feature2.description': 'Baue beeindruckende Serien auf und sieh deinen Fortschritt. Motivierende Streaks helfen dir dabei, dranzubleiben.',
+          
+          'feature3.title': 'Smart Erinnerungen',
+          'feature3.description': 'Personalisierte Benachrichtigungen zur richtigen Zeit. Nie wieder eine wichtige Routine vergessen.',
+          
+          'feature4.title': 'Detaillierte Analytics',
+          'feature4.description': 'Verfolge deinen Fortschritt mit aussagekräftigen Statistiken und Trends. Erkenne Muster in deinen Gewohnheiten.',
+          
+          'feature5.title': 'Achievements System',
+          'feature5.description': 'Schalte Erfolge frei und teile deine Meilensteine. Gamification macht das Aufbauen von Gewohnheiten zum Spiel.',
+          
+          'feature6.title': 'Datenschutz First',
+          'feature6.description': 'Deine Daten bleiben lokal auf deinem Gerät. Keine Cloud-Speicherung, keine Datensammlung, 100% privat.',
+          
+          // Screenshots Section
+          'screenshots.title': 'Screenshots',
+          'screenshots.subtitle': 'Entdecke die intuitive Benutzeroberfläche',
+          'screenshot1.title': 'Hauptbildschirm',
+          'screenshot1.subtitle': 'Routinen-Übersicht',
+          'screenshot2.title': 'Statistiken',
+          'screenshot2.subtitle': 'Fortschritt verfolgen',
+          'screenshot3.title': 'Einstellungen',
+          'screenshot3.subtitle': 'Personalisierung',
+          
+          // Download Section
+          'download.title': 'Bereit anzufangen?',
+          'download.subtitle': 'Lade Routine Tracker heute herunter und beginne deine Reise zu besseren Gewohnheiten.',
+          'download.google_play': 'Google Play',
+          'download.get_free': 'Jetzt kostenlos bei',
+          'download.ios_coming': '🍎 iOS Version in Entwicklung',
+          'download.ios_subtitle': 'Bald auch im App Store verfügbar',
+          
+          // App Info
+          'app_info.compatibility': '🤖 Kompatibel mit Android 8.0+ (API Level 26+)',
+          'app_info.free': '🌟 Kostenlos • Keine Werbung • Keine In-App-Käufe',
+          'app_info.privacy': '🔒 100% Datenschutz • Offline funktionsfähig',
+          'app_info.ios': '📱 iOS Version folgt in Kürze',
+          
+          // Footer
+          'footer.app_tagline': 'Die intuitive App für das Aufbauen und Verfolgen deiner täglichen Gewohnheiten.',
+          'footer.quick_links': 'Quick Links',
+          'footer.legal': 'Rechtliches',
+          'footer.contact': 'Kontakt',
+          'footer.privacy': 'Datenschutzerklärung',
+          'footer.imprint': 'Impressum'
+        },
+        
+        en: {
+          // Navigation
+          'nav.features': 'Features',
+          'nav.screenshots': 'Screenshots',
+          'nav.download': 'Download',
+          
+          // Meta
+          'meta.title': 'Routine Tracker - Master Your Daily Habits',
+          'meta.description': 'Routine Tracker helps you track and develop your daily habits. Free Android app for better routines and productivity.',
+          
+          // Hero Section
+          'hero.title': 'Build <span class="text-yellow-300">Healthy Habits</span>',
+          'hero.subtitle': 'Track your daily routines, build streaks, and achieve your goals with the intuitive Routine Tracker app.',
+          'hero.cta': 'Download for Android',
+          'hero.ios_coming': '📱 Coming soon for iOS',
+          
+          // Features Section
+          'features.title': 'Why Routine Tracker?',
+          'features.subtitle': 'A thoughtful app that helps you build and maintain positive habits.',
+          
+          'feature1.title': 'Simple Routine Management',
+          'feature1.description': 'Create and manage your daily routines with just a few taps. Categorize and organize them according to your needs.',
+          
+          'feature2.title': 'Streak Tracking',
+          'feature2.description': 'Build impressive streaks and see your progress. Motivating chains help you stay committed.',
+          
+          'feature3.title': 'Smart Reminders',
+          'feature3.description': 'Personalized notifications at the right time. Never forget an important routine again.',
+          
+          'feature4.title': 'Detailed Analytics',
+          'feature4.description': 'Track your progress with meaningful statistics and trends. Recognize patterns in your habits.',
+          
+          'feature5.title': 'Achievement System',
+          'feature5.description': 'Unlock achievements and share your milestones. Gamification makes building habits fun.',
+          
+          'feature6.title': 'Privacy First',
+          'feature6.description': 'Your data stays local on your device. No cloud storage, no data collection, 100% private.',
+          
+          // Screenshots Section
+          'screenshots.title': 'Screenshots',
+          'screenshots.subtitle': 'Discover the intuitive user interface',
+          'screenshot1.title': 'Main Screen',
+          'screenshot1.subtitle': 'Routine Overview',
+          'screenshot2.title': 'Statistics',
+          'screenshot2.subtitle': 'Track Progress',
+          'screenshot3.title': 'Settings',
+          'screenshot3.subtitle': 'Personalization',
+          
+          // Download Section
+          'download.title': 'Ready to Start?',
+          'download.subtitle': 'Download Routine Tracker today and begin your journey to better habits.',
+          'download.google_play': 'Google Play',
+          'download.get_free': 'Get it free on',
+          'download.ios_coming': '🍎 iOS Version Coming Soon',
+          'download.ios_subtitle': 'Available on App Store soon',
+          
+          // App Info
+          'app_info.compatibility': '🤖 Compatible with Android 8.0+ (API Level 26+)',
+          'app_info.free': '🌟 Free • No Ads • No In-App Purchases',
+          'app_info.privacy': '🔒 100% Privacy • Works Offline',
+          'app_info.ios': '📱 iOS Version Coming Soon',
+          
+          // Footer
+          'footer.app_tagline': 'The intuitive app for building and tracking your daily habits.',
+          'footer.quick_links': 'Quick Links',
+          'footer.legal': 'Legal',
+          'footer.contact': 'Contact',
+          'footer.privacy': 'Privacy Policy',
+          'footer.imprint': 'Imprint'
+        }
+      };
+
+      // Translation system
+      class LanguageManager {
+        constructor() {
+          this.currentLanguage = localStorage.getItem('language') || 'de';
+          this.init();
+        }
+
+        init() {
+          this.updateLanguageToggle();
+          this.translatePage();
+          this.bindEvents();
+        }
+
+        bindEvents() {
+          const langToggle = document.getElementById('lang-toggle');
+          if (langToggle) {
+            langToggle.addEventListener('click', () => {
+              this.toggleLanguage();
+            });
+          }
+        }
+
+        toggleLanguage() {
+          this.currentLanguage = this.currentLanguage === 'de' ? 'en' : 'de';
+          localStorage.setItem('language', this.currentLanguage);
+          this.updateLanguageToggle();
+          this.translatePage();
+          this.updateMetaTags();
+          this.updateStructuredData();
+        }
+
+        updateLanguageToggle() {
+          const currentLangElement = document.getElementById('current-lang');
+          if (currentLangElement) {
+            currentLangElement.textContent = this.currentLanguage.toUpperCase();
+          }
+        }
+
+        translatePage() {
+          const elements = document.querySelectorAll('[data-i18n]');
+          elements.forEach(element => {
+            const key = element.getAttribute('data-i18n');
+            const translation = this.getTranslation(key);
+            if (translation) {
+              // Check if translation contains HTML
+              if (translation.includes('<')) {
+                element.innerHTML = translation;
+              } else {
+                element.textContent = translation;
+              }
+            }
+          });
+
+          // Update language-specific links
+          this.updateLanguageLinks();
+        }
+
+        updateLanguageLinks() {
+          const privacyLink = document.querySelector('a[href*="datenschutz"]');
+          const imprintLink = document.querySelector('a[href*="impressum"]');
+          
+          if (privacyLink) {
+            privacyLink.href = this.currentLanguage === 'en' ? 'datenschutz-en.html' : 'datenschutz.html';
+          }
+          if (imprintLink) {
+            imprintLink.href = this.currentLanguage === 'en' ? 'impressum-en.html' : 'impressum.html';
+          }
+        }
+
+        updateMetaTags() {
+          // Update title
+          const title = document.querySelector('title');
+          if (title) {
+            title.textContent = this.getTranslation('meta.title');
+          }
+
+          // Update meta description
+          const metaDescription = document.querySelector('meta[name="description"]');
+          if (metaDescription) {
+            metaDescription.setAttribute('content', this.getTranslation('meta.description'));
+          }
+
+          // Update HTML lang attribute
+          document.documentElement.setAttribute('lang', this.currentLanguage);
+        }
+
+        updateStructuredData() {
+          const structuredDataScript = document.querySelector('script[type="application/ld+json"]');
+          if (structuredDataScript) {
+            const data = JSON.parse(structuredDataScript.textContent);
+            if (this.currentLanguage === 'en') {
+              data.description = "An intuitive Android app for tracking your daily routines. Build healthy habits and track your progress.";
+              data.keywords = "habits, routines, productivity, Android app, free";
+              data.inLanguage = "en";
+            } else {
+              data.description = "Eine intuitive Android App zur Verfolgung deiner täglichen Routinen. Baue gesunde Gewohnheiten auf und verfolge deinen Fortschritt.";
+              data.keywords = "Gewohnheiten, Routinen, Produktivität, Android App, kostenlos";
+              data.inLanguage = "de";
+            }
+            structuredDataScript.textContent = JSON.stringify(data, null, 2);
+          }
+        }
+
+        getTranslation(key) {
+          return translations[this.currentLanguage]?.[key] || translations.de[key] || key;
+        }
+      }
+
+      // Initialize language manager when DOM is loaded
+      document.addEventListener('DOMContentLoaded', () => {
+        new LanguageManager();
       });
     </script>
   </body>

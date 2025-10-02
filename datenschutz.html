@@ -7,6 +7,7 @@
     <meta name="description" content="Datenschutzerklärung für die Routine Tracker App - Ihre Privatsphäre ist uns wichtig.">
     <link rel="icon" type="image/png" href="favicon.png">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body class="bg-gray-50">
     <!-- Header -->
@@ -17,7 +18,15 @@
                     <img src="assets/img/app-icon.png" alt="Routine Tracker App Icon" class="w-8 h-8 mr-3 rounded-lg">
                     <span class="text-xl font-bold text-gray-800">Routine Tracker</span>
                 </a>
-                <a href="index.html" class="text-gray-600 hover:text-blue-600 transition">← Zurück zur Startseite</a>
+                <div class="flex items-center space-x-4">
+                    <a href="index.html" class="text-gray-600 hover:text-blue-600 transition">
+                        <i class="fas fa-home mr-2"></i>Home
+                    </a>
+                    <button id="lang-toggle" class="flex items-center space-x-2 px-3 py-2 rounded-lg border border-gray-200 hover:bg-gray-50 transition">
+                        <i class="fas fa-globe text-gray-600"></i>
+                        <span class="text-sm font-medium text-gray-700">DE</span>
+                    </button>
+                </div>
             </div>
         </div>
     </nav>
@@ -290,5 +299,12 @@
             </p>
         </div>
     </footer>
+
+    <script>
+        // Language switcher for German legal pages
+        document.getElementById('lang-toggle').addEventListener('click', () => {
+            window.location.href = 'datenschutz-en.html';
+        });
+    </script>
 </body>
 </html>
