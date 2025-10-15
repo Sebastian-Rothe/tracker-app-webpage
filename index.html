@@ -133,6 +133,41 @@
         max-width: 300px;
         margin: 0 auto;
       }
+      
+      /* TEMPORARY: Download not available banner - Remove when app is live */
+      .download-not-available {
+        background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+        color: white;
+        padding: 12px 24px;
+        border-radius: 8px;
+        margin: 16px 0;
+        text-align: center;
+        box-shadow: 0 4px 12px rgba(255, 107, 107, 0.3);
+        animation: pulse-warning 2s infinite;
+      }
+      
+      @keyframes pulse-warning {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.02); }
+        100% { transform: scale(1); }
+      }
+      
+      .download-disabled {
+        opacity: 0.6;
+        pointer-events: none;
+        position: relative;
+      }
+      
+      .download-disabled::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.1);
+        border-radius: inherit;
+      }
     </style>
   </head>
   <body class="bg-gray-50">
@@ -206,13 +241,24 @@
             Verfolge deine täglichen Routinen, baue Streaks auf und erreiche
             deine Ziele mit der intuitiven Routine Tracker App.
           </p>
+          <!-- TEMPORARY: Download not available notice - Remove when app is live -->
+          <div class="download-not-available">
+            <p class="font-semibold mb-1">
+              <i class="fas fa-exclamation-triangle mr-2"></i>
+              <span data-i18n="temp.download_not_available">Download noch nicht verfügbar</span>
+            </p>
+            <p class="text-sm opacity-90" data-i18n="temp.coming_soon">
+              Die App befindet sich noch in der Entwicklung. Bald verfügbar!
+            </p>
+          </div>
+          
           <div
             class="flex flex-col sm:flex-row gap-4 justify-center items-center"
           >
             <a
               href="#download"
-              class="bg-green-500 text-white px-10 py-5 rounded-full font-semibold text-xl hover:bg-green-600 transition shadow-lg"
-              aria-label="Routine Tracker für Android herunterladen"
+              class="download-disabled bg-green-500 text-white px-10 py-5 rounded-full font-semibold text-xl hover:bg-green-600 transition shadow-lg"
+              aria-label="Routine Tracker für Android herunterladen (noch nicht verfügbar)"
             >
               <i class="fab fa-google-play mr-3" aria-hidden="true"></i><span data-i18n="hero.cta">Für
               Android herunterladen</span>
@@ -404,12 +450,23 @@
           besseren Gewohnheiten.
         </p>
 
+        <!-- TEMPORARY: Download not available notice - Remove when app is live -->
+        <div class="download-not-available max-w-md mx-auto mb-8">
+          <p class="font-semibold mb-2">
+            <i class="fas fa-clock mr-2"></i>
+            <span data-i18n="temp.download_not_ready">App noch nicht bereit zum Download</span>
+          </p>
+          <p class="text-sm opacity-90" data-i18n="temp.final_testing">
+            Wir führen gerade die finalen Tests durch. Der Download wird bald freigeschaltet!
+          </p>
+        </div>
+
         <div class="flex flex-col gap-6 justify-center items-center mb-12">
           <!-- Android Download Button -->
           <a
             href="#"
-            class="bg-green-600 text-white px-12 py-6 rounded-xl flex items-center gap-4 hover:bg-green-700 transition shadow-lg transform hover:scale-105"
-            aria-label="Routine Tracker kostenlos bei Google Play herunterladen"
+            class="download-disabled bg-green-600 text-white px-12 py-6 rounded-xl flex items-center gap-4 hover:bg-green-700 transition shadow-lg transform hover:scale-105"
+            aria-label="Routine Tracker kostenlos bei Google Play herunterladen (noch nicht verfügbar)"
           >
             <i class="fab fa-google-play text-3xl" aria-hidden="true"></i>
             <div class="text-left">
@@ -634,7 +691,13 @@
           'footer.legal': 'Rechtliches',
           'footer.contact': 'Kontakt',
           'footer.privacy': 'Datenschutzerklärung',
-          'footer.imprint': 'Impressum'
+          'footer.imprint': 'Impressum',
+          
+          // TEMPORARY: Download not available messages - Remove when app is live
+          'temp.download_not_available': 'Download noch nicht verfügbar',
+          'temp.coming_soon': 'Die App befindet sich noch in der Entwicklung. Bald verfügbar!',
+          'temp.download_not_ready': 'App noch nicht bereit zum Download',
+          'temp.final_testing': 'Wir führen gerade die finalen Tests durch. Der Download wird bald freigeschaltet!'
         },
         
         en: {
@@ -705,7 +768,13 @@
           'footer.legal': 'Legal',
           'footer.contact': 'Contact',
           'footer.privacy': 'Privacy Policy',
-          'footer.imprint': 'Imprint'
+          'footer.imprint': 'Imprint',
+          
+          // TEMPORARY: Download not available messages - Remove when app is live
+          'temp.download_not_available': 'Download not yet available',
+          'temp.coming_soon': 'The app is still in development. Available soon!',
+          'temp.download_not_ready': 'App not ready for download yet',
+          'temp.final_testing': 'We are currently conducting final tests. Download will be available soon!'
         }
       };
 
