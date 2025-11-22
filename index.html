@@ -189,35 +189,39 @@
             />
             <span class="text-xl font-bold text-gray-800">Routine Tracker</span>
           </div>
-          <nav
-            class="hidden md:flex space-x-6 items-center"
-            role="navigation"
-            aria-label="Hauptnavigation"
-          >
-            <a
-              href="#features"
-              class="text-gray-600 hover:text-blue-600 transition"
-              aria-label="Zu den App-Features"
-              data-i18n="nav.features"
-              >Features</a
+          
+          <div class="flex items-center gap-4">
+            <!-- Desktop Navigation Links -->
+            <nav
+              class="hidden md:flex space-x-6 items-center"
+              role="navigation"
+              aria-label="Hauptnavigation"
             >
-            <a
-              href="#screenshots"
-              class="text-gray-600 hover:text-blue-600 transition"
-              aria-label="App-Screenshots ansehen"
-              data-i18n="nav.screenshots"
-              >Screenshots</a
-            >
-            <a
-              href="#download"
-              class="text-gray-600 hover:text-blue-600 transition"
-              aria-label="App herunterladen"
-              data-i18n="nav.download"
-              >Download</a
-            >
+              <a
+                href="#features"
+                class="text-gray-600 hover:text-blue-600 transition"
+                aria-label="Zu den App-Features"
+                data-i18n="nav.features"
+                >Features</a
+              >
+              <a
+                href="#screenshots"
+                class="text-gray-600 hover:text-blue-600 transition"
+                aria-label="App-Screenshots ansehen"
+                data-i18n="nav.screenshots"
+                >Screenshots</a
+              >
+              <a
+                href="#download"
+                class="text-gray-600 hover:text-blue-600 transition"
+                aria-label="App herunterladen"
+                data-i18n="nav.download"
+                >Download</a
+              >
+            </nav>
             
-            <!-- Language Switcher -->
-            <div class="flex items-center ml-4 space-x-2">
+            <!-- Language Switcher - Always Visible -->
+            <div class="flex items-center">
               <button
                 id="lang-toggle"
                 class="flex items-center space-x-2 px-3 py-2 rounded-lg border border-gray-200 hover:bg-gray-50 transition"
@@ -228,6 +232,7 @@
                 <i class="fas fa-chevron-down text-xs text-gray-500"></i>
               </button>
             </div>
+          </div>
           </nav>
         </div>
       </div>
