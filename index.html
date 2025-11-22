@@ -450,32 +450,34 @@
           besseren Gewohnheiten.
         </p>
 
-        <div class="flex flex-col gap-6 justify-center items-center mb-12">
-          <!-- Android Download Button -->
-          <a
-            href="https://play.google.com/store/apps/details?id=com.routinetracker.app&utm_source=emea_Med"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="bg-green-600 text-white px-12 py-6 rounded-xl flex items-center gap-4 hover:bg-green-700 transition shadow-lg transform hover:scale-105"
-            aria-label="Routine Tracker kostenlos bei Google Play herunterladen"
-          >
-            <i class="fab fa-google-play text-3xl" aria-hidden="true"></i>
-            <div class="text-left">
-              <p class="text-sm opacity-90" data-i18n="download.get_free">Jetzt kostenlos bei</p>
-              <p class="text-2xl font-bold" data-i18n="download.google_play">Google Play</p>
+        <div class="flex flex-col lg:flex-row gap-8 justify-center items-center mb-12">
+          <div class="flex flex-col sm:flex-row gap-6 items-center">
+            <!-- Android Download Button -->
+            <a
+              href="https://play.google.com/store/apps/details?id=com.routinetracker.app&utm_source=emea_Med"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="bg-green-600 text-white px-12 py-6 rounded-xl flex items-center gap-4 hover:bg-green-700 transition shadow-lg transform hover:scale-105"
+              aria-label="Routine Tracker kostenlos bei Google Play herunterladen"
+            >
+              <i class="fab fa-google-play text-3xl" aria-hidden="true"></i>
+              <div class="text-left">
+                <p class="text-sm opacity-90" data-i18n="download.get_free">Jetzt kostenlos bei</p>
+                <p class="text-2xl font-bold" data-i18n="download.google_play">Google Play</p>
+              </div>
+            </a>
+            
+            <!-- QR Code for Download -->
+            <div class="qr-code-container">
+              <div class="qr-code">
+                <img 
+                  src="assets/img/QR-download.svg" 
+                  alt="QR Code zum Download der Routine Tracker App"
+                  loading="lazy"
+                />
+              </div>
+              <p class="text-sm text-blue-100 opacity-90" data-i18n="download.qr_text">📱 Scanne mit deinem Smartphone</p>
             </div>
-          </a>
-          
-          <!-- QR Code for Download -->
-          <div class="qr-code-container">
-            <div class="qr-code">
-              <img 
-                src="assets/img/QR-download.svg" 
-                alt="QR Code zum Download der Routine Tracker App"
-                loading="lazy"
-              />
-            </div>
-            <p class="text-sm text-blue-100 opacity-90" data-i18n="download.qr_text">📱 Scanne mit deinem Smartphone</p>
           </div>
 
           <!-- Coming Soon iOS -->
@@ -741,7 +743,7 @@
           // Support Section
           'support.title': '💝 Unterstütze die Entwicklung',
           'support.description': 'Routine Tracker ist komplett kostenlos und werbefrei. Wenn dir die App gefällt, kannst du die weitere Entwicklung mit einer kleinen Spende unterstützen.',
-          'support.button': '💝 Support the Developer',
+          'support.button': '💝 Entwickler unterstützen',
           'support.qr_text': '📱 Oder scanne den Code',
           'support.thanks': 'Jeder Beitrag hilft, die App zu verbessern und neue Features zu entwickeln. Vielen Dank! ❤️',
           'download.qr_text': '📱 Scanne mit deinem Smartphone',
