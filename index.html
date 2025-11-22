@@ -134,6 +134,42 @@
         margin: 0 auto;
       }
       
+      /* QR Code Styles */
+      .qr-code-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+      }
+      
+      .qr-code {
+        width: 180px;
+        height: 180px;
+        padding: 12px;
+        background: white;
+        border-radius: 16px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      
+      .qr-code:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+      }
+      
+      .qr-code img {
+        width: 100%;
+        height: 100%;
+        display: block;
+      }
+      
+      /* Hide QR codes on mobile devices */
+      @media (max-width: 768px) {
+        .qr-code-container {
+          display: none;
+        }
+      }
+      
 
     </style>
   </head>
@@ -424,6 +460,18 @@
               <p class="text-2xl font-bold" data-i18n="download.google_play">Google Play</p>
             </div>
           </a>
+          
+          <!-- QR Code for Download -->
+          <div class="qr-code-container">
+            <div class="qr-code">
+              <img 
+                src="assets/img/QR-download.svg" 
+                alt="QR Code zum Download der Routine Tracker App"
+                loading="lazy"
+              />
+            </div>
+            <p class="text-sm text-blue-100 opacity-90" data-i18n="download.qr_text">📱 Scanne mit deinem Smartphone</p>
+          </div>
 
           <!-- Coming Soon iOS -->
           <div class="text-center text-blue-100">
@@ -440,6 +488,48 @@
           <p class="mb-2" data-i18n="app_info.free">🌟 Kostenlos • Keine Werbung • Keine In-App-Käufe</p>
           <p class="mb-1" data-i18n="app_info.privacy">🔒 100% Datenschutz • 100% Offline</p>
           <p class="text-sm opacity-75" data-i18n="app_info.ios">📱 iOS Version folgt in Kürze</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Support Section -->
+    <section class="py-16 bg-white">
+      <div class="container mx-auto px-6">
+        <div class="max-w-3xl mx-auto text-center">
+          <h2 class="text-3xl font-bold text-gray-800 mb-4" data-i18n="support.title">💝 Unterstütze die Entwicklung</h2>
+          <p class="text-lg text-gray-600 mb-8" data-i18n="support.description">
+            Routine Tracker ist komplett kostenlos und werbefrei. Wenn dir die App gefällt, 
+            kannst du die weitere Entwicklung mit einer kleinen Spende unterstützen.
+          </p>
+          
+          <div class="flex flex-col sm:flex-row gap-8 justify-center items-center">
+            <!-- Donate Button -->
+            <a
+              href="https://www.paypal.com/donate/?hosted_button_id=7RMD5JLDZ667N"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="bg-yellow-500 text-white px-10 py-4 rounded-xl font-semibold text-lg hover:bg-yellow-600 transition shadow-lg transform hover:scale-105 flex items-center gap-3"
+              aria-label="Entwickler via PayPal unterstützen"
+            >
+              <span data-i18n="support.button">💝 Support the Developer</span>
+            </a>
+            
+            <!-- QR Code for Donate -->
+            <div class="qr-code-container">
+              <div class="qr-code">
+                <img 
+                  src="assets/img/QR-donate.svg" 
+                  alt="QR Code für PayPal Spende"
+                  loading="lazy"
+                />
+              </div>
+              <p class="text-sm text-gray-600" data-i18n="support.qr_text">📱 Oder scanne den Code</p>
+            </div>
+          </div>
+          
+          <p class="text-sm text-gray-500 mt-6" data-i18n="support.thanks">
+            Jeder Beitrag hilft, die App zu verbessern und neue Features zu entwickeln. Vielen Dank! ❤️
+          </p>
         </div>
       </div>
     </section>
@@ -643,6 +733,14 @@
           'footer.privacy': 'Datenschutzerklärung',
           'footer.imprint': 'Impressum',
           
+          // Support Section
+          'support.title': '💝 Unterstütze die Entwicklung',
+          'support.description': 'Routine Tracker ist komplett kostenlos und werbefrei. Wenn dir die App gefällt, kannst du die weitere Entwicklung mit einer kleinen Spende unterstützen.',
+          'support.button': '💝 Support the Developer',
+          'support.qr_text': '📱 Oder scanne den Code',
+          'support.thanks': 'Jeder Beitrag hilft, die App zu verbessern und neue Features zu entwickeln. Vielen Dank! ❤️',
+          'download.qr_text': '📱 Scanne mit deinem Smartphone',
+          
           // TEMPORARY: Download not available messages - Remove when app is live
           'temp.download_not_available': 'Download noch nicht verfügbar',
           'temp.coming_soon': 'Die App befindet sich noch in der Entwicklung. Bald verfügbar!',
@@ -719,6 +817,14 @@
           'footer.contact': 'Contact',
           'footer.privacy': 'Privacy Policy',
           'footer.imprint': 'Imprint',
+          
+          // Support Section
+          'support.title': '💝 Support the Development',
+          'support.description': 'Routine Tracker is completely free and ad-free. If you like the app, you can support further development with a small donation.',
+          'support.button': '💝 Support the Developer',
+          'support.qr_text': '📱 Or scan the code',
+          'support.thanks': 'Every contribution helps improve the app and develop new features. Thank you! ❤️',
+          'download.qr_text': '📱 Scan with your smartphone',
           
           // TEMPORARY: Download not available messages - Remove when app is live
           'temp.download_not_available': 'Download not yet available',
